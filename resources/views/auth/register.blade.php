@@ -38,6 +38,23 @@
                                 @endif
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">Role</label>
+
+                            <div class="col-md-6">
+                                
+                                <select class="form-control" name="role">
+                                	@if(count($RoleOptions) >= 1)
+                                		@foreach($RoleOptions as $ID => $Role)
+                                			<option value="{{ $ID }}">{{ $Role }}</option>
+                                		@endforeach
+                                	@endif
+                                </select>
+                                
+                            </div>
+                        </div>
+                        
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
